@@ -6,4 +6,4 @@ function quemar(a, b) {
 
 }
 quemar(time, arepa)
-if (quemar == )
+if (quemar == ) "jkbjfhel;fyzefgik"
