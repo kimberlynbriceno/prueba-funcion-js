@@ -2,16 +2,13 @@ let nombre = prompt('cual es tu nombre?');
 let debes = parseInt(prompt("cuanto debes"));
 let costo = 5
     //OPCION 1
+var pagoid = document.getElementById("ventaid");
 
-function pago(deuda, precio) {
+let sumaInt = (a, b) => a + b;
 
-    result = deuda + precio;
-    return result
-}
+pagoid.innerHTML = (`hola ${nombre} tu deuda es de ${sumaInt(debes, costo)}`)
 
-let resul = pago(debes, costo);
-console.log(`hola ${nombre} tu deuda es de ${resul}`)
-    //OPCION2
+//OPCION2
 function pago(deuda, precio) {
 
     result = deuda + precio;
