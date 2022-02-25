@@ -1,9 +1,11 @@
-let arepa = parceInt(prompt("a que hora colocaste tu arepa"))
-let time = parceInt(prompt("que hora tienes?"))
+//let arepa = parceInt(prompt("a que hora colocaste tu arepa"))
+let time = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+console.log(time)
 
-function quemar(a, b) {
-    return = a - b
 
-}
-quemar(time, arepa)
-if (quemar == ) "jkbjfhel;fyzefgik"
+
+
+//var quemar = (a, b) => a - b
+//
+//quemar(time, arepa)
+//if (quemar == )
