@@ -11,15 +11,21 @@
 </head>
 
 <body>
-    <div id="ventaid">
-        <h1>JUEGA <br> Piedra Papel o Tijera</h1>
+    <div id="titulo">
+        <h1 class="display-1" style="text-align: center;">JUEGA</h1>
+        <h1 class="display-6" style="text-align: center;">Piedra Papel o Tijera</h1>
+    </div>
+    <div class="caja-boton" id="box.boton" style="position: relative;left: 37%;">
+        <button type="button" class="btn btn-primary" id="bPiedra" value="1" onclick='piedra()'>piedra</button>
+        <button type="button" class="btn btn-secondary" id="bPapel" onclick='papel()'>Papel</button>
+        <button type="button" class="btn btn-success" id="bTijera" onclick='tijera()'>Tijera</button>
     </div>
 
-    <button type="button" class="btn btn-primary" id="bPiedra" value=" 1" onclick='piedra()'>piedra</button>
-    <button type="button" class="btn btn-secondary" id="bPapel" onclick='papel()'>Papel</button>
-    <button type="button" class="btn btn-success" id="bTijera" onclick='tijera()'>Tijera</button>
 
-    <h1 id="resultado"></h1>
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button" id="bJugar" style="margin-top: 20px; background-color: #dc3545; border: none;" onclick="jugar()">jugar</button>
+    </div>
+
 
 
 
@@ -111,7 +117,7 @@
 
     // console.log(secondSmar)
 </script>
-<script src="funcionflecha.js"></script>
+<script src="ifJuego.js"></script>
 <!--script src="filtrarObject.js"></script>
 <script src="ifPizza.js"></script>
 <script src="funcionSuma.js"></script>
