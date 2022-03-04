@@ -1,20 +1,20 @@
 let eleccionJugador = 0
-
-
-function piedra(i) {
+    //
+function piedra() {
     var eleccionJugador = 1
 }
-
-
-function papel(i) {
-    var eleccionJugador = 2
-}
-//papel(eleccionJugador)
-
-function tijera(i) {
-    var eleccionJugador = 3
-}
-
+//piedra(eleccionJugador)
+//
+//
+//function papel() {
+//    var eleccionJugador = 2
+//}
+////papel()
+//
+//function tijera() {
+//    var eleccionJugador = 3
+//}
+////tijera()
 
 
 
