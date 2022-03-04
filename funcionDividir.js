@@ -9,3 +9,6 @@
   }
   let resultado = division(numeroCi, divisor);
   console.log(letras[resultado]);
+
+  let aleatori = Math.floor(Math.random() * (3 - 0)) + 0;
+  console.log(aleatori)
