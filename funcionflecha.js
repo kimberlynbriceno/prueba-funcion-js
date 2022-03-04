@@ -1,20 +1,20 @@
-let eleccionJugador = 0
+let eleccionJugador = parseInt(prompt("1: piedra, 2:papel , 3:tijera"))
+    //    //
+    //function piedra() {
+    //    var eleccionJugador = 1
+    //}
+    //piedra(eleccionJugador)
     //
-function piedra() {
-    var eleccionJugador = 1
-}
-//piedra(eleccionJugador)
-//
-//
-//function papel() {
-//    var eleccionJugador = 2
-//}
-////papel()
-//
-//function tijera() {
-//    var eleccionJugador = 3
-//}
-////tijera()
+    //
+    //function papel() {
+    //    var eleccionJugador = 2
+    //}
+    ////papel()
+    //
+    //function tijera() {
+    //    var eleccionJugador = 3
+    //}
+    ////tijera()
 
 
 
