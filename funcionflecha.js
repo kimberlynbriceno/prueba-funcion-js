@@ -1,20 +1,24 @@
-let eleccionJugador = parseInt(prompt("1: piedra, 2:papel , 3:tijera"))
-    //    //
-    //function piedra() {
-    //    var eleccionJugador = 1
-    //}
-    //piedra(eleccionJugador)
-    //
-    //
-    //function papel() {
-    //    var eleccionJugador = 2
-    //}
-    ////papel()
-    //
-    //function tijera() {
-    //    var eleccionJugador = 3
-    //}
-    ////tijera()
+//let eleccionJugador = parseInt(prompt("1: piedra, 2:papel , 3:tijera"))
+let eleccionJugador = ["piedra", "papel", "tijera"]
+let eleccionDelJugador = eleccionJugador[0]
+console.log(eleccionDelJugador)
+
+//function piedra() {
+//
+//    var eleccionJugador = 1
+//}
+//piedra(eleccionJugador)
+//
+//
+//function papel() {
+//    var eleccionJugador = 2
+//}
+////papel()
+//
+//function tijera() {
+//    var eleccionJugador = 3
+//}
+////tijera()
 
 
 
