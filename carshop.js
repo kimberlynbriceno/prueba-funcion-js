@@ -7,6 +7,4 @@ while (confirm("deseas agregar otro producto?")) {
     carro.push(newProducto)
 }
 console.log("Usted compro :")
-for (let compra of carro) {
-    console.log(compra)
-}
+carro.forEach(producto) => (console.log(producto))
