@@ -14,19 +14,21 @@ let compras = [{
     nombre: "llavero",
     costo: 2000
 }, {
-    nombre: "boxer",
     costo: 7000
 }]
 
-//  #1
-var comprasFiltradasFilter = compras.filter(function(compra) {
-    return compra.costo === 2000
-});
-// #2
-var comprasFiltradasMap = compras.map(function(compra) {
-    return compra.nombre
-});
-//#3
-var comprasFiltradasFind = compras.find(function(compra) {
-    return compra.costo === 2000
-});
+for (const propiedad in compras) {
+    console.log(compras[propiedad]);
+
+    //  #1
+    var comprasFiltradasFilter = compras.filter(function(compra) {
+        return compra.costo === 2000
+    });
+    // #2
+    var comprasFiltradasMap = compras.map(function(compra) {
+        return compra.nombre
+    });
+    //#3
+    var comprasFiltradasFind = compras.find(function(compra) {
+        return compra.costo === 2000
+    });
