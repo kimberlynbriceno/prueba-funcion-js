@@ -9,5 +9,9 @@ let otrosmar = new smarfhone(["motorola", "huawei", "samsung"], ["g9", "t9", "j2
 //let secondSmar = new smarfhone("samsung", "j2", 150);
 
 
-for (const propiedad in smarfhone) {
-    console.log(smarfhone[propiedad]);
+
+console.log(otrosmar.costo[2])
+console.log(document.head);
+console.log(document.title);
+console.log(document.body);
+console.log(document.domain);
