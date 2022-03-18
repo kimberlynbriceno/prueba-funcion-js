@@ -9,3 +9,8 @@ while (confirm("deseas agregar otro producto?")) {
 console.log("Usted compro :")
 
 carro.forEach(producto => console.log(producto))
+
+
+
+// const h1  = document.querySelector(".title-h1")
+h1.textContent = "nuevo title js"
