@@ -11,6 +11,11 @@ console.log("Usted compro :")
 carro.forEach(producto => console.log(producto))
 
 
+const boton = document.querySelector("#botonId")
 
-// const h1  = document.querySelector(".title-h1")
-h1.textContent = "nuevo title js"
+boton.addEventListener("click", () =>{
+    const h1  = document.querySelector(".title-h1")
+    h1.textContent = "Esta tu compra"
+    h1.style.color = "orange"
+    
+})
