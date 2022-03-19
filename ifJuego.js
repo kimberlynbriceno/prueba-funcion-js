@@ -8,7 +8,11 @@ function jugar() {
     } else {
         if (eleccionMaquina === 1 && eleccionJugador === 2) {
             alert("Piedra")
-            document.getElementById("titulo").innerHTML = "en hora buena !GANASTE!"
+            
+            const title  = document.querySelector("titulo")
+            title.textContent = "en hora buena !GANASTE!"
+            title.style.color = "orange"
+            // document.getElementById("titulo").innerHTML = "en hora buena !GANASTE!"
         }
         if (eleccionMaquina === 1 && eleccionJugador === 3) {
             alert("Piedra")
@@ -52,4 +56,3 @@ function tijera() {
 
 jugar()
 
-//alert(eleccionMaquina)
