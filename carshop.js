@@ -11,6 +11,10 @@ const agregarCarrito = (e) => {
         id: e.target.dataset.producto,
         cantidad: 1
     }
+    if (objCompra.hasOwnProperty(articulo.titulo)) {
+        articulo.cantidad = objCompra[articulo.titulo].cantidad + 1;
+    }
+
     objCompra[articulo.titulo] = articulo
 
     pintarCarrito()
