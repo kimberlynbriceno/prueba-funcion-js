@@ -3,26 +3,39 @@ const lista = document.querySelector("#listaId")
 
 const estados = ["merida", "tachira", "yaracuy", "maracaibo", "trujillo"]
 
-const fragment = new DocumentFragment();
-
 estados.forEach((estado) => {
-    const li = document.createElement("li")
-    li.className = "list"
+    // const li = document.querySelector(".list")
+    const template = document.querySelector("#templateId")
+    const clone = template.content.cloneNode(true)
+    clone.querySelector(".text-primary").textContent = estado
 
-    const blacki = document.createElement('b')
-    blacki.textContent = "pais:"
-
-    const text = document.createElement('span')
-    text.className = "text-primary"
-    text.textContent = estado
-
-    li.appendChild(blacki)
-    li.appendChild(text)
-    fragment.appendChild(li)
-
+    lista.appendChild(clone)
 })
 
-lista.appendChild(fragment)
+
+
+
+
+// const fragment = new DocumentFragment();
+// 
+// estados.forEach((estado) => {
+// const li = document.createElement("li")
+// li.className = "list"
+// 
+// const blacki = document.createElement('b')
+// blacki.textContent = "pais:"
+// 
+// const text = document.createElement('span')
+// text.className = "text-primary"
+// text.textContent = estado
+// 
+// li.appendChild(blacki)
+// li.appendChild(text)
+// fragment.appendChild(li)
+// 
+// })
+
+// lista.appendChild(fragment)
 
 
 
