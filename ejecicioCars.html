@@ -5,13 +5,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
-    <h1 class="title-h1">carrito de compras</h1>
+    <main class="container mt-5"></main>
+    <div class="row text-center">
+        <article class="col-sm-3 mb-3">
+            <div class="card">
+                <img src="img/arroz.jpg" class="card-img-top" alt="..." width="5">
+                <div class="card-body">
+                    <h3 class="card-title">Arroz</h3>
+                    <button class="btn btn-outline-primary" data-producto="Arroz"> 
+                            Comprar
+                    </button>
+                </div>
+            </div>
+        </article>
+        <article class="col-sm-3 mb-3 m">
+            <div class="card">
+                <img src="img/pasta.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Pasta</h3>
+                    <button class="btn btn-outline-primary" data-producto="Pasta"> 
+                            Comprar
+                    </button>
+                </div>
+            </div>
+        </article>
+        <article class="col-sm-3 mb-3">
+            <div class="card">
+                <img src="img/aceite.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Aceite</h3>
+                    <button class="btn btn-outline-primary" data-producto="Aceite"> 
+                            Comprar
+                    </button>
+                </div>
+            </div>
+        </article>
+        <article class="col-sm-3 mb-3">
+            <div class="card">
+                <img src="img/harina.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Harina</h3>
+                    <button class="btn btn-outline-primary" data-producto="Harina"> 
+                            Comprar
+                    </button>
+                </div>
+            </div>
+        </article>
+    </div>
+    </main>
+
+    <section class="container mt-5">
+        <ul class="list-group" id="carritoId"></ul>
+    </section>
+
+    <template id="templateId">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="lead">Arroz</span>
+            <span class="badge bg-danger rounded-pill">12</span>
+        </li>
+    </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--h1 class="title-h1">carrito de compras</h1>
     <button id="botonId">cambia el titulo</button
-    <p id="parrafoId"></p>
+    <p id="parrafoId"></p-->
 </body>
 
 </html>

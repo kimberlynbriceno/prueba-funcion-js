@@ -1,21 +1,90 @@
-const carro = []
-let preguntaCliente = prompt("que deseas comprar?")
-carro.push(preguntaCliente)
+const carro = document.querySelector("#carritoId")
+const template = document.querySelector("#templateId")
+const fragment = document.createDocumentFragment()
+const comprar = document.querySelectorAll(".card .btn")
 
-while (confirm("deseas agregar otro producto?")) {
-    let newProducto = prompt("cual es tu nuevo producto?")
-    carro.push(newProducto)
+const objCompra = {}
+
+const agregarCarrito = (e) => {
+    const articulo = {
+        titulo: e.target.dataset.producto,
+        id: e.target.dataset.producto,
+        cantidad: 1
+    }
+    objCompra[articulo.titulo] = articulo
+
+    pintarCarrito()
+
 }
-console.log("Usted compro :")
-
-carro.forEach(producto => console.log(producto))
+comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
 
 
-const boton = document.querySelector("#botonId")
+const pintarCarrito = (articulo) => {
+    carro.textContent = ""
 
-boton.addEventListener("click", () =>{
-    const h1  = document.querySelector(".title-h1")
-    h1.textContent = "Esta tu compra"
-    h1.style.color = "orange"
-    
-})
+    Object.values(objCompra).forEach((item) => {
+        const clone = template.content.cloneNode(true);
+        clone.querySelector(".lead").textContent = item.titulo
+        clone.querySelector(".badge").textContent = item.cantidad
+
+        fragment.appendChild(clone)
+    })
+    carro.appendChild(fragment)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//const carro = []
+//let preguntaCliente = prompt("que deseas comprar?")
+//carro.push(preguntaCliente)
+//
+//while (confirm("deseas agregar otro producto?")) {
+//    let newProducto = prompt("cual es tu nuevo producto?")
+//    carro.push(newProducto)
+//}
+//console.log("Usted compro :")
+//
+//carro.forEach(producto => console.log(producto))
+//
+//
+//const boton = document.querySelector("#botonId")
+//
+//boton.addEventListener("click", () =>{
+//    const h1  = document.querySelector(".title-h1")
+//    h1.textContent = "Esta tu compra"
+//    h1.style.color = "orange"
+//    
+//})
