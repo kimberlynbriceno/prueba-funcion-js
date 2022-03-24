@@ -1,5 +1,5 @@
 const lista = document.querySelector("#listaId")
-
+const fragment = document.createDocumentFragment()
 
 const estados = ["merida", "tachira", "yaracuy", "maracaibo", "trujillo"]
 
@@ -9,9 +9,9 @@ estados.forEach((estado) => {
     const clone = template.content.cloneNode(true)
     clone.querySelector(".text-primary").textContent = estado
 
-    lista.appendChild(clone)
+    fragment.appendChild(clone)
 })
-
+lista.appendChild(fragment)
 
 
 
