@@ -16,6 +16,12 @@ lista.appendChild(fragment)
 
 
 
+
+
+
+
+
+
 // const fragment = new DocumentFragment();
 // 
 // estados.forEach((estado) => {
@@ -54,7 +60,7 @@ lista.appendChild(fragment)
 
 
 
-
+//** ejercicio de inputColor*/
 // const inputColor = document.querySelector("#inputColor")
 // const boton = document.querySelector("#boton")
 // const cardColor = document.querySelector("#cardColor")
