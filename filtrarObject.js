@@ -17,18 +17,39 @@ let compras = [{
     costo: 7000
 }]
 
-for (const propiedad in compras) {
-    console.log(compras[propiedad]);
+const newProducto = [{
+    nombre: "polvo",
+    costo: 4000
+}, {
+    nombre: "llavero",
+    costo: 2000
+}, {
+    nombre: "papa",
+    costo: 7000
+}]
 
-    //  #1
-    var comprasFiltradasFilter = compras.filter(function(compra) {
-        return compra.costo === 2000
-    });
-    // #2
-    var comprasFiltradasMap = compras.map(function(compra) {
-        return compra.nombre
-    });
-    //#3
-    var comprasFiltradasFind = compras.find(function(compra) {
-        return compra.costo === 2000
-    });
+
+//  #1
+var comprasFiltradasFilter = compras.filter((compra) => compra.costo === 2000);
+// #2
+var comprasFiltradasMap = compras.map((compra) => compra.nombre);
+//#3
+var comprasFiltradasFind = compras.find((compra) => compra.costo === 2000);
+
+var comprasFiltradasSome = compras.some((compra) => compra.nombre === "mayonesa");
+
+var comprasFiltradasFinIndex = compras.findIndex((compra) => compras.nombre === "llavero");
+
+var comprasFiltradasSlice = compras.slice((2, 3))
+
+var comprasFiltradasConcat = compras.concat(newProducto)
+
+
+
+
+
+
+console.log(comprasFiltradasSome)
+console.log(comprasFiltradasFinIndex)
+console.log(comprasFiltradasConcat)
+console.log(comprasFiltradasSlice)
