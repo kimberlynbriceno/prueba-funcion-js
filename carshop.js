@@ -3,7 +3,8 @@ const template = document.querySelector("#templateId")
 const fragment = document.createDocumentFragment()
 const comprar = document.querySelectorAll(".card .btn")
 
-const objCompra = {}
+const objCompra = []
+
 
 const agregarCarrito = (e) => {
     const articulo = {
@@ -11,17 +12,29 @@ const agregarCarrito = (e) => {
         id: e.target.dataset.producto,
         cantidad: 1
     }
-    if (objCompra.hasOwnProperty(articulo.titulo)) {
-        articulo.cantidad = objCompra[articulo.titulo].cantidad + 1;
+
+    const indice = objCompra.findIndex((iten) => iten.id === articulo.id)
+    console.log(indice)
+
+    if (indice === -1) {
+        objCompra.push(articulo)
+    } else {
+        objCompra[indice].cantidad++
     }
+    console.log(objCompra)
 
-    objCompra[articulo.titulo] = articulo
-
-    pintarCarrito()
-
+    // #ESTA ES LA OPCION CON OBJETOS
+    //  if (objCompra.hasOwnProperty(articulo.titulo)) {
+    //      articulo.cantidad = objCompra[articulo.titulo].cantidad + 1;
+    //  }
+    //
+    //  objCompra[articulo.titulo] = articulo
+    //
+    //  pintarCarrito()
+    //
 }
-comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
 
+comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
 
 const pintarCarrito = (articulo) => {
     carro.textContent = ""
@@ -89,6 +102,4 @@ const pintarCarrito = (articulo) => {
 //boton.addEventListener("click", () =>{
 //    const h1  = document.querySelector(".title-h1")
 //    h1.textContent = "Esta tu compra"
-//    h1.style.color = "orange"
-//    
-//})
+//    h1.style.color = "orange"})

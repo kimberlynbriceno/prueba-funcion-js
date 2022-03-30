@@ -14,6 +14,7 @@ let compras = [{
     nombre: "llavero",
     costo: 2000
 }, {
+    nombre: "silla",
     costo: 7000
 }]
 
@@ -38,9 +39,9 @@ var comprasFiltradasFind = compras.find((compra) => compra.costo === 2000);
 
 var comprasFiltradasSome = compras.some((compra) => compra.nombre === "mayonesa");
 
-var comprasFiltradasFinIndex = compras.findIndex((compra) => compras.nombre === "llavero");
+var comprasFiltradasFinIndex = compras.findIndex((compra) => compra.nombre === "llavero");
 
-var comprasFiltradasSlice = compras.slice((2, 3))
+var comprasFiltradasSlice = compras.slice((1, 3))
 
 var comprasFiltradasConcat = compras.concat(newProducto)
 
