@@ -43,6 +43,11 @@ const pintarCarrito = (objCompra) => {
 
 };
 
+const botonesMasMenos = document.querySelector("#btnMasMenos")
+botonesMasMenos.addEventListener(("click"), (e) => {
+    console.log(e.target);
+})
+
 
 
 
