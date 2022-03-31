@@ -21,25 +21,17 @@ const agregarCarrito = (e) => {
     } else {
         objCompra[indice].cantidad++
     }
-    console.log(objCompra)
 
-    // #ESTA ES LA OPCION CON OBJETOS
-    //  if (objCompra.hasOwnProperty(articulo.titulo)) {
-    //      articulo.cantidad = objCompra[articulo.titulo].cantidad + 1;
-    //  }
-    //
-    //  objCompra[articulo.titulo] = articulo
-    //
-    //  pintarCarrito()
-    //
+    pintarCarrito(objCompra)
+
 }
-
 comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
 
-const pintarCarrito = (articulo) => {
+
+const pintarCarrito = (objCompra) => {
     carro.textContent = ""
 
-    Object.values(objCompra).forEach((item) => {
+    objCompra.forEach((item) => {
         const clone = template.content.cloneNode(true);
         clone.querySelector(".lead").textContent = item.titulo
         clone.querySelector(".badge").textContent = item.cantidad
@@ -47,7 +39,9 @@ const pintarCarrito = (articulo) => {
         fragment.appendChild(clone)
     })
     carro.appendChild(fragment)
-}
+
+
+};
 
 
 
@@ -58,10 +52,30 @@ const pintarCarrito = (articulo) => {
 
 
 
+// #ESTA ES LA OPCION CON OBJETOS
+//  if (objCompra.hasOwnProperty(articulo.titulo)) {
+//      articulo.cantidad = objCompra[articulo.titulo].cantidad + 1;
+//  }
+//
+//  objCompra[articulo.titulo] = articulo
+//
+//  pintarCarrito()
+//
 
 
-
-
+// #EST ES LA OPCION CON OBJECT
+// const pintarCarrito = (articulo) => {
+// carro.textContent = ""
+// 
+// Object.values(objCompra).forEach((item) => {
+// const clone = template.content.cloneNode(true);
+// clone.querySelector(".lead").textContent = item.titulo
+// clone.querySelector(".badge").textContent = item.cantidad
+// 
+// fragment.appendChild(clone)
+// })
+// carro.appendChild(fragment)
+// }
 
 
 
