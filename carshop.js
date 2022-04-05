@@ -1,31 +1,44 @@
 const carro = document.querySelector("#carritoId")
 const template = document.querySelector("#templateId")
+const footer = document.querySelector("#footer")
+const templateFooter = document.querySelector("#templateFooter")
 const fragment = document.createDocumentFragment()
-const comprar = document.querySelectorAll(".card .btn")
+    // const comprar = document.querySelectorAll(".card .btn")
+
+document.addEventListener("click", (e) => {
+    if (e.target.matches(".card .btn-danger")) {
+        agregarCarrito(e)
+    }
+})
+
+
+
 
 const objCompra = []
 
 
 const agregarCarrito = (e) => {
-    const articulo = {
-        titulo: e.target.dataset.producto,
-        id: e.target.dataset.producto,
-        cantidad: 1
+        const articulo = {
+            titulo: e.target.dataset.producto,
+            id: e.target.dataset.producto,
+            cantidad: 1,
+            precio: parseInt(e.target.dataset.precio)
+        }
+
+        const indice = objCompra.findIndex((iten) => iten.id === articulo.id)
+        console.log(indice)
+
+        if (indice === -1) {
+            objCompra.push(articulo)
+        } else {
+            objCompra[indice].cantidad++
+                objCompra[indice].precio = objCompra[indice].cantidad * articulo.precio
+        }
+
+        pintarCarrito(objCompra)
+
     }
-
-    const indice = objCompra.findIndex((iten) => iten.id === articulo.id)
-    console.log(indice)
-
-    if (indice === -1) {
-        objCompra.push(articulo)
-    } else {
-        objCompra[indice].cantidad++
-    }
-
-    pintarCarrito(objCompra)
-
-}
-comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
+    // comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
 
 
 const pintarCarrito = (objCompra) => {
