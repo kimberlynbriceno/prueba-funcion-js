@@ -33,7 +33,7 @@ const pintarCarrito = (objCompra) => {
 
     objCompra.forEach((item) => {
         const clone = template.content.cloneNode(true);
-        clone.querySelector(".lead").textContent = item.titulo
+        clone.querySelector(".h5").textContent = item.titulo
         clone.querySelector(".badge").textContent = item.cantidad
 
         fragment.appendChild(clone)
@@ -43,10 +43,12 @@ const pintarCarrito = (objCompra) => {
 
 };
 
-const botonesMasMenos = document.querySelector("#btnMasMenos")
-botonesMasMenos.addEventListener(("click"), (e) => {
-    console.log(e.target);
-})
+// const botonesMasMenos = document.querySelector("#btnMasMenos")
+// botonesMasMenos.addEventListener("click", (e) => {
+// if (e.target.id === "btn+-") {
+// console.log(e.target.id)
+// };
+// })
 
 
 
