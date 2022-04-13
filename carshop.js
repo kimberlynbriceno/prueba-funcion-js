@@ -19,7 +19,7 @@ document.addEventListener("click", (e) => {
 
 
 
-const objCompra = []
+let objCompra = []
 
 
 const agregarCarrito = (e) => {
@@ -68,18 +68,27 @@ const pintarCarrito = () => {
 };
 
 const btnMas = (e) => {
-    objCompra = objCompra.map(item) => {
-        if (item.id === e.target.dataset.id) {}
+    objCompra = objCompra.map(item => {
+        if (item.id === e.target.dataset.id) {
+            item.cantidad++
+
+        }
+        return item
     })
 
-
-
-console.log(e.target.dataset.id)
+    pintarCarrito()
 
 }
 
 const btnMenos = (e) => {
-    console.log("soy btn-")
+    objCompra = objCompra.filter(item => {
+        if (item.cantidad > 0) {
+            item.cantidad--
+
+        }
+        return item
+    })
+    pintarCarrito()
 }
 
 
