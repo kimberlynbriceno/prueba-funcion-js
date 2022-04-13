@@ -10,9 +10,9 @@ document.addEventListener("click", (e) => {
         agregarCarrito(e)
     }
     if (e.target.matches(".btn-primary")) {
-        console.log("soy btn+")
+        btnMas(e)
     };
-
+    if (e.target.dataset.id === )
 })
 
 
@@ -35,7 +35,7 @@ const agregarCarrito = (e) => {
             objCompra.push(articulo)
         } else {
             objCompra[indice].cantidad++
-                objCompra[indice].precio = objCompra[indice].cantidad * articulo.precio
+                // objCompra[indice].precio = objCompra[indice].cantidad * articulo.precio
         }
 
         pintarCarrito()
@@ -51,8 +51,11 @@ const pintarCarrito = () => {
         const clone = template.content.cloneNode(true);
         clone.querySelector(".h5").textContent = item.titulo
         clone.querySelector(".badge").textContent = item.cantidad
-        clone.querySelector("#spanTotal").textContent =
-            item.precio * item.cantidad;
+        clone.querySelector("#spanTotal").textContent = item.precio * item.cantidad
+
+        clone.querySelector(".btn-primary").dataset.id = item.id
+        clone.querySelector(".btn-success").dataset.id = item.id
+
         // const cloneDos = templateFooter.content.cloneNode(true)
         // clone.querySelector("#totalCompra").textContent =
         fragment.appendChild(clone)
@@ -62,12 +65,14 @@ const pintarCarrito = () => {
 
 };
 
-// const botonesMasMenos = document.querySelector("#btnMasMenos")
-// botonesMasMenos.addEventListener("click", (e) => {
-// if (e.target.id === "btn+-") {
-// console.log(e.target.id)
-// };
-// })
+const btnMas = (e) => {
+    console.log("soy btn +")
+
+}
+
+const btnMenos = (e) => {
+    console.log("soy btn-")
+}
 
 
 
