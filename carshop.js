@@ -9,8 +9,11 @@ document.addEventListener("click", (e) => {
     if (e.target.matches(".card .btn-danger")) {
         agregarCarrito(e)
     }
-})
+    if (e.target.matches(".btn-primary")) {
+        console.log("soy btn+")
+    };
 
+})
 
 
 
@@ -35,20 +38,23 @@ const agregarCarrito = (e) => {
                 objCompra[indice].precio = objCompra[indice].cantidad * articulo.precio
         }
 
-        pintarCarrito(objCompra)
+        pintarCarrito()
 
     }
     // comprar.forEach((boton) => boton.addEventListener("click", agregarCarrito))
 
 
-const pintarCarrito = (objCompra) => {
+const pintarCarrito = () => {
     carro.textContent = ""
 
     objCompra.forEach((item) => {
         const clone = template.content.cloneNode(true);
         clone.querySelector(".h5").textContent = item.titulo
         clone.querySelector(".badge").textContent = item.cantidad
-
+        clone.querySelector("#spanTotal").textContent =
+            item.precio * item.cantidad;
+        // const cloneDos = templateFooter.content.cloneNode(true)
+        // clone.querySelector("#totalCompra").textContent =
         fragment.appendChild(clone)
     })
     carro.appendChild(fragment)
