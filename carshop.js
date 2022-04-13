@@ -12,7 +12,9 @@ document.addEventListener("click", (e) => {
     if (e.target.matches(".btn-primary")) {
         btnMas(e)
     };
-    if (e.target.dataset.id === )
+    if (e.target.matches(".btn-success")) {
+        btnMenos(e)
+    }
 })
 
 
@@ -66,7 +68,13 @@ const pintarCarrito = () => {
 };
 
 const btnMas = (e) => {
-    console.log("soy btn +")
+    objCompra = objCompra.map(item) => {
+        if (item.id === e.target.dataset.id) {}
+    })
+
+
+
+console.log(e.target.dataset.id)
 
 }
 
