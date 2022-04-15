@@ -64,8 +64,25 @@ const pintarCarrito = () => {
     })
     carro.appendChild(fragment)
 
-
+    pintarFooter()
 };
+
+
+const pintarFooter = () => {
+    footer.textContent = ""
+
+    const totalFooter = objCompra.reduce(
+        (acc, valorNuevo) => {
+            acc + valorNuevo.cantidad * valorNuevo.precio
+        })
+    console.log(totalFooter)
+
+    const clone = templateFooter.content.cloneNode(true)
+    clone.querySelector("#totalCompra").textContent = "soyel footer"
+
+    footer.appendChild(clone)
+}
+
 
 const btnMas = (e) => {
     objCompra = objCompra.map(item => {
@@ -90,7 +107,6 @@ const btnMenos = (e) => {
     })
     pintarCarrito()
 }
-
 
 
 
