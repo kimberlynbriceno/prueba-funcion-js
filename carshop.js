@@ -69,16 +69,17 @@ const pintarCarrito = () => {
 
 
 const pintarFooter = () => {
-    footer.textContent = ""
+    footer.textContent = "";
 
-    const totalFooter = objCompra.reduce(
-        (acc, valorNuevo) => {
-            acc + valorNuevo.cantidad * valorNuevo.precio
-        })
-    console.log(totalFooter)
+    const total = objCompra.reduce(
+        (acc, current) => acc + current.precio * current.cantidad,
+        0
+    );
+
+    console.log(total)
 
     const clone = templateFooter.content.cloneNode(true)
-    clone.querySelector("#totalCompra").textContent = "soyel footer"
+    clone.querySelector("#totalCompra").textContent = total
 
     footer.appendChild(clone)
 }
@@ -99,16 +100,18 @@ const btnMas = (e) => {
 
 const btnMenos = (e) => {
     objCompra = objCompra.filter(item => {
-        if (item.cantidad > 0) {
-            item.cantidad--
+        if (item.id === e.target.dataset.id) {
+            if (item.cantidad > 0) {
+                item.cantidad--;
+                if (item.cantidad === 0) return
+                return item
 
-        }
-        return item
+            }
+        } else { return item }
+        pintarCarrito()
     })
-    pintarCarrito()
+
 }
-
-
 
 
 
