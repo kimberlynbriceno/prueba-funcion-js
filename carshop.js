@@ -108,8 +108,8 @@ const btnMenos = (e) => {
 
             }
         } else { return item }
-        pintarCarrito()
     })
+    pintarCarrito()
 
 }
 
