@@ -58,8 +58,7 @@ const pintarCarrito = () => {
         clone.querySelector(".btn-primary").dataset.id = item.id
         clone.querySelector(".btn-success").dataset.id = item.id
 
-        // const cloneDos = templateFooter.content.cloneNode(true)
-        // clone.querySelector("#totalCompra").textContent =
+
         fragment.appendChild(clone)
     })
     carro.appendChild(fragment)
