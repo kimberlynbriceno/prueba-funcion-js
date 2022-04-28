@@ -16,7 +16,7 @@
         <form id="form">
             <input . class="form-control mb-3" autocomplete="off" type="text" name="userName" placeholder="Escriba su nombre" id="userName" required>
 
-            <input class="form-control mb-3" type="number" name="userNumber" autocomplete="off" placeholder="Escriba su numero de identificacion" id="userNumber" required minlength="5" maxlength="10">
+            <input class="form-control mb-3" type="number" name="userNumber" autocomplete="off" placeholder="Escriba su numero de identificacion" id="userNumber" required>
 
             <input class="form-control mb-3" type="email" autocomplete="off" name="userEmail" title="ingrese un correo valido" placeholder="Escriba su numero email" id="userEmail" required>
 
@@ -31,14 +31,15 @@
     const userEmail = document.querySelector("#userEmail")
     const userNumber = document.querySelector("#userNumber")
 
-    const expName = /[a-z]/gi;
+    const expName = /^[a-z ,.'-]+$/i;
     const expEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/
-    const expNumber = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
+    const expNumber = /[0-9]/
 
 
 
     formulario.addEventListener('submit', e => {
         e.preventDefault()
+
 
         if (!expName.test(userName.value)) {
 
@@ -55,14 +56,10 @@
 
             console.log("debes escribir solo numeros")
             return
+
+
         }
+        console.log("formulario enviado con exito")
 
-
-
-
-
-        console.log(userName.value)
-        console.log(userEmail.value)
-        console.log(userNumber.value)
     })
 </script>
