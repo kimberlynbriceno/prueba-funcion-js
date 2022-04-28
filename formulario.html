@@ -14,11 +14,11 @@
     <div class="container">
         <h1>Formularios</h1>
         <form id="form">
-            <input . class="form-control mb-3" autocomplete="off" type="text" name="userName" placeholder="Escriba su nombre" id="userName" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="debes escribir solo letras">
+            <input . class="form-control mb-3" autocomplete="off" type="text" name="userName" placeholder="Escriba su nombre" id="userName" required>
 
-            <input class="form-control mb-3" type="number" name="userNumber" autocomplete="off" placeholder="Escriba su numero de identificacion" id="userNumber" required minlength="5" maxlength="10" pattern="^[a-z0-9_-]{3,16}$" title="debes escribir solo numeros">
+            <input class="form-control mb-3" type="number" name="userNumber" autocomplete="off" placeholder="Escriba su numero de identificacion" id="userNumber" required minlength="5" maxlength="10">
 
-            <input class="form-control mb-3" type="email" autocomplete="off" name="userEmail" title="ingrese un correo valido" placeholder="Escriba su numero email" id="userEmail" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+            <input class="form-control mb-3" type="email" autocomplete="off" name="userEmail" title="ingrese un correo valido" placeholder="Escriba su numero email" id="userEmail" required>
 
             <button type="submit" class="btn btn-success"> Enviar formulario</button>
     </div>
@@ -31,14 +31,38 @@
     const userEmail = document.querySelector("#userEmail")
     const userNumber = document.querySelector("#userNumber")
 
+    const expName = /[a-z]/gi;
+    const expEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/
+    const expNumber = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
+
+
+
     formulario.addEventListener('submit', e => {
         e.preventDefault()
-        console.log("formulario enviado")
 
+        if (!expName.test(userName.value)) {
+
+            console.log("debes escribir solo letras")
+            return
+        }
+
+        if (!expEmail.test(userEmail.value)) {
+
+            console.log("debes escribir un correo valido")
+            return
+        }
+        if (!expNumber.test(userNumber.value)) {
+
+            console.log("debes escribir solo numeros")
+            return
+        }
+
+
+
+
+
+        console.log(userName.value)
+        console.log(userEmail.value)
+        console.log(userNumber.value)
     })
-
-
-
-    const expreReg = /[a-z]/gi;
-    console.log(expreReg.test("kimberlyn"))
 </script>
