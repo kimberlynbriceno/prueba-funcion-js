@@ -15,18 +15,20 @@
         <h1>Formularios</h1>
         <form id="form">
             <input . class="form-control mb-3" autocomplete="off" type="text" name="userName" placeholder="Escriba su nombre" id="userName">
-            <template id="templateInvalido">     
-                <div id="alertInv" class="alert alert-danger">debes escribir solo letras</div>
-            </template>
+
+            <p id="alertName" class="alert alert-danger d-none"></p>
+
             <input class="form-control mb-3" type="number" name="userNumber" autocomplete="off" placeholder="Escriba su numero de identificacion" id="userNumber">
 
             <input class="form-control mb-3" type="email" autocomplete="off" name="userEmail" title="ingrese un correo valido" placeholder="Escriba su numero email" id="userEmail">
-            <button type="submit" class="btn btn-success"> Enviar formulario</button>
-            <template id="templateExitoso">  
-              <div  id="alertEx" class="alert alert-success mt-3">formulario enviado con exito</div>
-            </template>
-    </div>
 
+            <p id="alertEmail" class="alert alert-danger d-none"></p>
+
+            <button type="submit" class="btn btn-success"> Enviar formulario</button>
+
+            <template id="templateExitoso">  
+              <div  class="alert alert-success mt-3"><p id="alertEx">formulario enviado con exito</p></div>
+            </template>
 
     </div>
 </body>
@@ -37,8 +39,10 @@
     const userName = document.querySelector("#userName")
     const userEmail = document.querySelector("#userEmail")
     const userNumber = document.querySelector("#userNumber")
-    const templateInv = document.querySelector("#templateInvalido")
     const templateEx = document.querySelector("#templateExitoso")
+    const alertName = document.querySelector("#alertName")
+    const alertEmail = document.querySelector("#alertEmail")
+
 
 
     const expName = /^[a-z ,.'-]+$/i;
@@ -46,6 +50,13 @@
     const expNumber = /[0-9]/
 
 
+    const pintarAlert = () => {
+
+        const clone = templateEx.content.cloneNode(true)
+        clone.querySelector(".alert-success").textContent = "Mensaje enviado con exito"
+
+    }
+    pintarAlert()
 
     formulario.addEventListener('submit', e => {
         e.preventDefault()
@@ -63,6 +74,6 @@
             return
         }
         console.log("formulario enviado con exito")
-
+        pintarAlert()
     })
 </script>
