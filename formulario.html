@@ -16,13 +16,13 @@
         <form id="form">
             <input . class="form-control mb-3" type="text" name="userName" placeholder="Escriba su nombre" id="userName">
 
-            <p id="alertName" class="alert alert-danger d-none"></p>
+            <p id="alertName" class="text-danger d-none"></p>
 
             <input class="form-control mb-3" type="number" name="userNumber" placeholder="Escriba su numero de identificacion" id="userNumber">
 
             <input class="form-control mb-3" type="email" name="userEmail" title="ingrese un correo valido" placeholder="Escriba su numero email" id="userEmail">
 
-            <p id="alertEmail" class="alert-danger d-none"></p>
+            <p id="alertEmail" class="text-danger d-none"></p>
 
             <button type="submit" class="btn btn-success"> Enviar formulario</button>
 
@@ -40,7 +40,6 @@
     const formulario = document.querySelector("#form")
     const userName = document.querySelector("#userName")
     const userEmail = document.querySelector("#userEmail")
-    const userNumber = document.querySelector("#userNumber")
 
 
     const alertName = document.querySelector("#alertName")
@@ -59,20 +58,42 @@
         alertExitoso.textContent = "Mensaje enviado con éxito";
     };
 
+
+    const pintarErrores = (error) => {
+
+        error.forEach((item) => {
+            item.tipo.classList.remove("d-none")
+            item.tipo.textContent = item.mensaje
+        });
+
+    }
+
     formulario.addEventListener('submit', e => {
         e.preventDefault()
+        alertExitoso.classList.add("d-none")
+
+        const error = []
 
 
-        if (!expName.test(userName.value)) {
-            console.log("si")
+        if (!expName.test(userName.value) || !userName.value.trim()) {
+            error.push({
+                tipo: alertName,
+                mensaje: "tienes un error en el campo nombre"
+            })
+        }
+
+        if (!expEmail.test(userEmail.value) || !userEmail.value.trim()) {
+            error.push({
+                tipo: alertEmail,
+                mensaje: "tienes que escribir un correo valido"
+            })
+        }
+
+        if (error.length !== 0) {
+            pintarErrores(error)
             return
         }
 
-        if (!expEmail.test(userEmail.value)) {
-
-            console.log("debes escribir un correo valido")
-            return
-        }
         console.log("formulario enviado con exito")
         pintarMensajeExito()
     })
