@@ -64,6 +64,7 @@
         error.forEach((item) => {
             item.tipo.classList.remove("d-none")
             item.tipo.textContent = item.mensaje
+
         });
 
     }
@@ -76,17 +77,29 @@
 
 
         if (!expName.test(userName.value) || !userName.value.trim()) {
+            userName.classList.add("is-invalid")
+
             error.push({
                 tipo: alertName,
                 mensaje: "tienes un error en el campo nombre"
             })
+        } else {
+            userName.classList.remove("is-invalid")
+            userName.classList.add("is-valid")
+            alertName.classList.add("d-none")
+
         }
 
         if (!expEmail.test(userEmail.value) || !userEmail.value.trim()) {
+            userEmail.classList.add("is-invalid")
             error.push({
                 tipo: alertEmail,
                 mensaje: "tienes que escribir un correo valido"
             })
+        } else {
+            userEmail.classList.remove("is-invalid")
+            userEmail.classList.add("is-valid")
+            alertEmail.classList.add("d-none")
         }
 
         if (error.length !== 0) {
