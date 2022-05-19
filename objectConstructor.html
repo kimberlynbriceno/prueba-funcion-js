@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="lib/moment.min.js"></script>
+
 </head>
 
 <body>
@@ -14,14 +16,14 @@
 </body>
 
 </html>
-<script src="./includes/moment.js/moment.js"></script>
 <script>
     const smartphone = {
         brand: "motorola",
         model: "g9 power",
-        storage: "128 gb",
-        charge: "80%",
-        date: "",
+        storage: parseInt("128"),
+        charge: parseInt("100"),
+        time: moment().format('LTS'),
+        date: moment().format('l'),
         condition: "off",
         turnOn(condition) {
             if (this.condition == "off") {
@@ -33,16 +35,17 @@
                 this.condition = "off"
             }
         },
-        takePhoto() {
-
+        takePhoto(a, b) {
+            this.storage = this.storage - 1 + "gb"
+            this.charge = this.charge - 1 + "%"
         },
     }
 
     console.log(smartphone)
-
-    smartphone.toTurnOff(this.condition)
+    smartphone.turnOn(this.condition)
     console.log(smartphone)
 
-    smartphone.turnOn(this.condition)
+    // smartphone.toTurnOff(this.condition)
+    smartphone.takePhoto(this.storage, this.charge)
     console.log(smartphone)
 </script>
