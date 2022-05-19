@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>objetos</h1>
+
+</body>
+
+</html>
+<script src="./includes/moment.js/moment.js"></script>
+<script>
+    const smartphone = {
+        brand: "motorola",
+        model: "g9 power",
+        storage: "128 gb",
+        charge: "80%",
+        date: "",
+        condition: "off",
+        turnOn(condition) {
+            if (this.condition == "off") {
+                this.condition = "on"
+            }
+        },
+        toTurnOff(condition) {
+            if (this.condition == "on") {
+                this.condition = "off"
+            }
+        },
+        takePhoto() {
+
+        },
+    }
+
+    console.log(smartphone)
+
+    smartphone.toTurnOff(this.condition)
+    console.log(smartphone)
+
+    smartphone.turnOn(this.condition)
+    console.log(smartphone)
+</script>

@@ -32,3 +32,5 @@ var comprasFiltradasFind = compras.find((compra) => compra.costo === 2000)
 console.log(comprasFiltradasFind)
 var comprasFiltradasSome = compras.some((compra) => compra.costo === 2000)
 console.log(comprasFiltradasSome)
+
+console.log(Object.values(compras))
