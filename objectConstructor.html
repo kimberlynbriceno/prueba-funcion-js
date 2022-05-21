@@ -31,13 +31,13 @@
         time: moment().format('LTS'),
         date: moment().format('l'),
         condition: "off",
-        turnOn(condition) {
-            if (this.condition == "off") {
+        turnOn(_swich) {
+            if (_swich == "off") {
                 this.condition = "on"
             }
         },
-        toTurnOff(condition) {
-            if (this.condition == "on") {
+        toTurnOff(_swich) {
+            if (_swich == "on") {
                 this.condition = "off"
             }
         },
@@ -47,11 +47,14 @@
         },
     }
 
+    console.log(smartphone.condition)
+    smartphone.turnOn(smartphone.condition)
     console.log(smartphone)
-    smartphone.turnOn(this.condition)
-    console.log(smartphone)
+        // console.log(smartphone)
 
-    // smartphone.toTurnOff(this.condition)
     smartphone.takePhoto(this.storage, this.charge)
+    console.log(smartphone)
+        // smartphone.takePhoto(this.storage, this.charge)
+    smartphone.toTurnOff(smartphone.condition)
     console.log(smartphone)
 </script>
