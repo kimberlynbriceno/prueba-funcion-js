@@ -28,8 +28,15 @@ var comprasFiltradasMap = compras.map((compra) => compra.nombre);
 console.log(comprasFiltradasMap)
     // #3
 
-var comprasFiltradasFind = compras.find((compra) => compra.costo === 2000)
+var comprasFiltradasFind = compras.find((compra) => {
+    if (compra.costo === 2000) {
+        compras.pop(compra)
+    }
+})
+
 console.log(comprasFiltradasFind)
+console.log(compras)
+
 var comprasFiltradasSome = compras.some((compra) => compra.costo === 2000)
 console.log(comprasFiltradasSome)
 

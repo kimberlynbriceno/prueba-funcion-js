@@ -23,38 +23,56 @@
 
 </html>
 <script>
+    const storage = {
+        id: 0,
+        peso: 120,
+        photo: [],
+        save(name, size) {
+            this.photo.push({
+                nameFile: name,
+                sizeFile: size
+            })
+            this.peso -= size
+            this.id = this.photo.length
+        },
+        delete(item) {
+            
+
+        }
+
+    }
+    console.log(storage.photoD)
+
     const smartphone = {
         brand: "motorola",
         model: "g9 power",
-        storage: parseInt("128"),
+        storage: 120,
         charge: parseInt("100"),
         time: moment().format('LTS'),
         date: moment().format('l'),
         condition: "off",
-        turnOn(_swich) {
-            if (_swich == "off") {
+        turnOn(condition) {
+            if (this.condition == "off") {
                 this.condition = "on"
             }
         },
-        toTurnOff(_swich) {
-            if (_swich == "on") {
+        toTurnOff(condition) {
+            if (this.condition == "on") {
                 this.condition = "off"
             }
         },
-        takePhoto(a, b) {
-            this.storage = this.storage - 1 + "gb"
-            this.charge = this.charge - 1 + "%"
-        },
+        takePhoto(name, size) {
+            storage.save(name, size)
+            this.storage -= size
+
+        }
+
+
     }
-
-    console.log(smartphone.condition)
-    smartphone.turnOn(smartphone.condition)
+    console.log(storage)
+    smartphone.takePhoto("photo1.jpg", 1.20)
     console.log(smartphone)
-        // console.log(smartphone)
-
-    smartphone.takePhoto(this.storage, this.charge)
-    console.log(smartphone)
-        // smartphone.takePhoto(this.storage, this.charge)
-    smartphone.toTurnOff(smartphone.condition)
+    console.log(storage)
+    smartphone.takePhoto("photo2.jpg", 1.80)
     console.log(smartphone)
 </script>
