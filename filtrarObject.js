@@ -21,7 +21,7 @@ let compras = [{
 
 
 //  #1
-var comprasFiltradasFilter = compras.filter((compra) => compra.costo === 2000);
+var comprasFiltradasFilter = compras.filter((compra) => compra.costo !== 2000);
 console.log(comprasFiltradasFilter)
     // #2
 var comprasFiltradasMap = compras.map((compra) => compra.nombre);
@@ -29,13 +29,11 @@ console.log(comprasFiltradasMap)
     // #3
 
 var comprasFiltradasFind = compras.find((compra) => {
-    if (compra.costo === 2000) {
-        compras.pop(compra)
-    }
+    compra.costo === 2000
 })
 
 console.log(comprasFiltradasFind)
-console.log(compras)
+console.log(compras.for)
 
 var comprasFiltradasSome = compras.some((compra) => compra.costo === 2000)
 console.log(comprasFiltradasSome)

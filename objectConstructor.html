@@ -23,56 +23,38 @@
 
 </html>
 <script>
-    const storage = {
-        id: 0,
-        peso: 120,
-        photo: [],
-        save(name, size) {
-            this.photo.push({
-                nameFile: name,
-                sizeFile: size
-            })
-            this.peso -= size
-            this.id = this.photo.length
-        },
-        delete(item) {
-            
-
+    class Lavadora {
+        constructor(brand, model, capacity = 18) {
+            this.brand = brand;
+            this.model = model;
+            this.condition = {}
+            this.capacity = capacity;
+            this.power = false;
         }
 
-    }
-    console.log(storage.photoD)
-
-    const smartphone = {
-        brand: "motorola",
-        model: "g9 power",
-        storage: 120,
-        charge: parseInt("100"),
-        time: moment().format('LTS'),
-        date: moment().format('l'),
-        condition: "off",
-        turnOn(condition) {
-            if (this.condition == "off") {
-                this.condition = "on"
+        powerBotom() {
+            this.power = !this.power
+        }
+        lavar() {
+            if (!this.power) {
+                console.log("no puedes EJECUTAR si esta apagado")
             }
-        },
-        toTurnOff(condition) {
-            if (this.condition == "on") {
-                this.condition = "off"
-            }
-        },
-        takePhoto(name, size) {
-            storage.save(name, size)
-            this.storage -= size
+            return
 
+            const process = "lavando"
+
+            const lavando = {
+                process: process,
+                amount: amount,
+                duration: duration,
+                waterAmount: waterAmount,
+                type: type,
+
+            }
+            this.condition[process] {...lavando
+            }
         }
 
 
     }
-    console.log(storage)
-    smartphone.takePhoto("photo1.jpg", 1.20)
-    console.log(smartphone)
-    console.log(storage)
-    smartphone.takePhoto("photo2.jpg", 1.80)
-    console.log(smartphone)
 </script>
