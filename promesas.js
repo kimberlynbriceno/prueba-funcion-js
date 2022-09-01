@@ -151,9 +151,15 @@ const findtaksById = (id, callback) => {
       })
     }
 const find = async (id) => {
-    const tak = await findtaksById(id)
-    console.log(tak)
+  try{  
+     const restaks = await Promise.all([findtaksById(1), findtaksById(3)])
+    console.log(restaks[0].name, restaks[1].website)}
+ catch(err){
+  console.log(err)
+ }
+ finally{
+  console.log ("gracias por su atencion")
+ }
   }
-find(1);
+find(5);
 
-console.log("final del codigo")
