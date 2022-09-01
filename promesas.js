@@ -119,12 +119,14 @@ const taks =[{
 //     const tak = taks.find(item => item.id === id);
 
 //     return new Promise((positive , reject) => {
+//       setTimeout(() => {
 //         if(tak){
-//             positive(tak)
-//         }
-//         else{
-//             reject("no se encontro id " + id)
-//         }
+//           positive(tak)
+//       }
+//       else{
+//           reject("no se encontro id " + id)
+//       }
+//       }, 6000)
 //     })
 
 // }
@@ -132,29 +134,26 @@ const taks =[{
 // findtaksById(2)
 //     .then(tak => console.log(tak))
 //     .catch((err) => console.log(err))
-
 // #async await
 
 const findtaksById = (id, callback) => {
-    new Promise((positive , reject) => {
-    const tak = taks.find(item => item.id === id);
-
-        if(tak){ positive(tak)
+      const tak = taks.find(item => item.id === id);
+  
+      return new Promise((positive , reject) => {
+        setTimeout(() => {
+          if(tak){
+            positive(tak)
         }
         else{
             reject("no se encontro id " + id)
         }
-    })
-
-  }
-
+        }, 6000)
+      })
+    }
 const find = async (id) => {
     const tak = await findtaksById(id)
     console.log(tak)
-}
-find(1)
+  }
+find(1);
 
-if()
-
-
-
+console.log("final del codigo")
