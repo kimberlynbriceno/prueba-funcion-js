@@ -110,30 +110,25 @@ const taks =[{
 //     if(err){
 //         return console.log(err)
 //     }
-//          console.log(tak)
-// })
-
-// #promise
-
-// const findtaksById = (id, callback) => {
-//     const tak = taks.find(item => item.id === id);
-
-//     return new Promise((positive , reject) => {
-//       setTimeout(() => {
-//         if(tak){
-//           positive(tak)
-//       }
-//       else{
-//           reject("no se encontro id " + id)
-//       }
-//       }, 6000)
-//     })
-
-// }
-
-// findtaksById(2)
-//     .then(tak => console.log(tak))
-//     .catch((err) => console.log(err))
+////          console.log(tak)
+//// })
+////#promise
+//const findtaksById = (id, callback) => {
+//    const tak = taks.find(item => item.id === id);
+//    return new Promise((positive , reject) => {
+//      setTimeout(() => {
+//        if(tak){
+//          positive(tak)
+//      }
+//      else{
+//          reject("no se encontro id " + id)
+//      }
+//      }, 6000)
+//    })
+//}
+//findtaksById(3)
+//    .then(tak => console.log(tak))
+//    .catch((err) => console.log(err))
 // #async await
 
 const findtaksById = (id, callback) => {
@@ -152,7 +147,7 @@ const findtaksById = (id, callback) => {
     }
 const find = async (id) => {
   try{  
-     const restaks = await Promise.all([findtaksById(1), findtaksById(3)])
+     const restaks = await Promise.all([findtaksById(4), findtaksById(1)])
     console.log(restaks[0].name, restaks[1].website)}
  catch(err){
   console.log(err)
@@ -161,5 +156,5 @@ const find = async (id) => {
   console.log ("gracias por su atencion")
  }
   }
-find(5);
+find(2);
 
