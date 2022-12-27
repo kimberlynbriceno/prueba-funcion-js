@@ -147,8 +147,8 @@ const findtaksById = (id, callback) => {
     }
 const find = async (id) => {
   try{  
-     const restaks = await Promise.all([findtaksById(4), findtaksById(1)])
-    console.log(restaks[0].name, restaks[1].website)}
+     const restaks = await Promise.all([findtaksById(6), findtaksById(3)])
+    console.log(restaks[0].phone, restaks[1].name)}
  catch(err){
   console.log(err)
  }
@@ -156,5 +156,5 @@ const find = async (id) => {
   console.log ("gracias por su atencion")
  }
   }
-find(2);
+find();
 
