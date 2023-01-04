@@ -1,95 +1,95 @@
-// const taks =[{
-      // "id": 1,
-      // "name": "Leanne Graham",
-      // "username": "Bret",
-      // "email": "Sincere@april.biz",
-      // "address": {
-        // "street": "Kulas Light",
-        // "suite": "Apt. 556",
-        // "city": "Gwenborough",
-        // "zipcode": "92998-3874",
-        // "geo": {
-          // "lat": "-37.3159",
-          // "lng": "81.1496"
-        // }
-      // },
-      // "phone": "1-770-736-8031 x56442",
-      // "website": "hildegard.org",
-      // "company": {
-        // "name": "Romaguera-Crona",
-        // "catchPhrase": "Multi-layered client-server neural-net",
-        // "bs": "harness real-time e-markets"
-      // }
-    // },
-    // {
-      // "id": 2,
-      // "name": "Ervin Howell",
-      // "username": "Antonette",
-      // "email": "Shanna@melissa.tv",
-      // "address": {
-        // "street": "Victor Plains",
-        // "suite": "Suite 879",
-        // "city": "Wisokyburgh",
-        // "zipcode": "90566-7771",
-        // "geo": {
-          // "lat": "-43.9509",
-          // "lng": "-34.4618"
-        // }
-      // },
-      // "phone": "010-692-6593 x09125",
-      // "website": "anastasia.net",
-      // "company": {
-        // "name": "Deckow-Crist",
-        // "catchPhrase": "Proactive didactic contingency",
-        // "bs": "synergize scalable supply-chains"
-      // }
-    // },
-    // {
-      // "id": 3,
-      // "name": "Clementine Bauch",
-      // "username": "Samantha",
-      // "email": "Nathan@yesenia.net",
-      // "address": {
-        // "street": "Douglas Extension",
-        // "suite": "Suite 847",
-        // "city": "McKenziehaven",
-        // "zipcode": "59590-4157",
-        // "geo": {
-          // "lat": "-68.6102",
-          // "lng": "-47.0653"
-        // }
-      // },
-      // "phone": "1-463-123-4447",
-      // "website": "ramiro.info",
-      // "company": {
-        // "name": "Romaguera-Jacobson",
-        // "catchPhrase": "Face to face bifurcated interface",
-        // "bs": "e-enable strategic applications"
-      // }
-    // },
-    // {
-      // "id": 4,
-      // "name": "Patricia Lebsack",
-      // "username": "Karianne",
-      // "email": "Julianne.OConner@kory.org",
-      // "address": {
-        // "street": "Hoeger Mall",
-        // "suite": "Apt. 692",
-        // "city": "South Elvis",
-        // "zipcode": "53919-4257",
-        // "geo": {
-          // "lat": "29.4572",
-          // "lng": "-164.2990"
-        // }
-      // },
-      // "phone": "493-170-9623 x156",
-      // "website": "kale.biz",
-      // "company": {
-        // "name": "Robel-Corkery",
-        // "catchPhrase": "Multi-tiered zero tolerance productivity",
-        // "bs": "transition cutting-edge web services"
-      // }
-    // }]
+const taks =[{
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org",
+      "company": {
+        "name": "Romaguera-Crona",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "bs": "harness real-time e-markets"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net",
+      "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+      }
+    },
+    {
+       "id": 3,
+       "name": "Clementine Bauch",
+       "username": "Samantha",
+       "email": "Nathan@yesenia.net",
+      "address": {
+         "street": "Douglas Extension",
+         "suite": "Suite 847",
+         "city": "McKenziehaven",
+         "zipcode": "59590-4157",
+        "geo": {
+       "lat": "-68.6102",
+        "lng": "-47.0653"
+        }
+       },
+       "phone": "1-463-123-4447",
+         "website": "ramiro.info",
+         "company": {
+         "name": "Romaguera-Jacobson",
+         "catchPhrase": "Face to face bifurcated interface",
+         "bs": "e-enable strategic applications"
+     }
+    },
+{
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+         "street": "Hoeger Mall",
+         "suite": "Apt. 692",
+         "city": "South Elvis",
+         "zipcode": "53919-4257",
+         "geo": {
+      "lat": "29.4572",
+     "lng": "-164.2990"
+     }
+      },
+       "phone": "493-170-9623 x156",
+       "website": "kale.biz",
+       "company": {
+       "name": "Robel-Corkery",
+       "catchPhrase": "Multi-tiered zero tolerance productivity",
+       "bs": "transition cutting-edge web services"
+     }
+    }]
 // 
 // #callback
 
@@ -110,10 +110,10 @@
 //     if(err){
 //         return console.log(err)
 //     }
-////          console.log(tak)
-//// })
-////#promise
-//const findtaksById = (id, callback) => {
+//          console.log(tak)
+// })
+// //#promise
+// const findtaksById = (id, callback) => {
 //    const tak = taks.find(item => item.id === id);
 //    return new Promise((positive , reject) => {
 //      setTimeout(() => {
@@ -125,42 +125,42 @@
 //      }
 //      }, 6000)
 //    })
-//}
-//findtaksById(3)
+// }
+// findtaksById(3)
 //    .then(tak => console.log(tak))
 //    .catch((err) => console.log(err))
 // #async await
 
-// const findtaksById = (id, callback) => {
-      // const tak = taks.find(item => item.id === id);
-  // 
-      // return new Promise((positive , reject) => {
-        // setTimeout(() => {
-          // if(tak){
-            // positive(tak)
-        // }
-        // else{
-            // reject("no se encontro id " + id)
-        // }
-        // }, 6000)
-      // })
-    // }
-// const find = async (id) => {
-  // try{  
-    //  const restaks = await Promise.all([findtaksById(6), findtaksById(3)])
-    // console.log(restaks[0].phone, restaks[1].name)}
-//  catch(err){
- // console.log(err)
-//  }
-//  finally{
-  // console.log ("gracias por su atencion")
-//  }
-  // }
-// find();
+const findtaksById = (id, callback) => {
+      const tak = taks.find(item => item.id === id);
+  
+      return new Promise((positive , reject) => {
+        setTimeout(() => {
+          if(tak){
+            positive(tak)
+        }
+        else{
+            reject("no se encontro id " + id)
+        }
+        }, 6000)
+      })
+    }
+const find = async (id) => {
+  try{  
+     const restaks = await Promise.all([findtaksById(6), findtaksById(3)])
+    console.log(restaks[0].phone, restaks[1].name)}
+ catch(err){
+ console.log(err)
+ }
+ finally{
+  console.log ("gracias por su atencion")
+ }
+  }
+find();
 
 // #fech
 
-const url = "https://jsonplaceholder.typicode.com/users/"
+// const url = "https://jsonplaceholder.typicode.com/users/"
 
 
 
@@ -170,19 +170,19 @@ const url = "https://jsonplaceholder.typicode.com/users/"
     // .catch(e => console.log(e))
     // .finally(() => console.log("andres es marico"))
 
-const findtaksById = async (id) => {
-    try{
-        const res = await fetch (url + id)
-        const tak = await res.json()
+// const findtaksById = async (id) => {
+    // try{
+        // const res = await fetch (url + id)
+        // const tak = await res.json()
+// 
+        // console.log(tak)
+    // }
+    // catch(err){
+      // console.log(err)
+    // }
+    // finally{
+      // console.log("finalizo")
+    // }
+  // }
 
-        console.log(tak)
-    }
-    catch(err){
-      console.log(err)
-    }
-    finally{
-      console.log("finalizo")
-    }
-  }
-  findtaksById(5)
-
+  // findtaksById(5)
